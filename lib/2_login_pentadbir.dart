@@ -1,12 +1,20 @@
-import 'package:aplikasi_kehadiran/2_login_pentadbir.dart';
 import 'package:aplikasi_kehadiran/prov.dart';
-import 'package:aplikasi_kehadiran/slide_right.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+class Blank extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.white,
+    );
+  }
+}
 
 
-class PilihAkaun extends StatelessWidget {
+class KKPentadbir extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   
@@ -62,53 +70,7 @@ class PilihAkaun extends StatelessWidget {
                 child: Container(
                   color: Colors.transparent,
                   child: Column(children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0,50,0,0),
-                        child: ButtonTheme(
-                          minWidth: 300,
-                          height: 40,
-
-                            child: RaisedButton(
-                            elevation: 0,
-                            onPressed: (){
-                              Navigator.push(context, SlideRightRoute(widget:Blank() ));
-                            },
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                            color: getColor.sailorBlue,
-                            child: Text('Pentadbir',style: TextStyle(fontFamily: 'pierlight', color: Colors.white,fontSize: 18),),
-                          ),
-                        ),
-                      ),
-
-                      ButtonTheme(
-                        minWidth: 300,
-                        height: 40,
-
-                          child: RaisedButton(
-                          elevation: 0,
-                          onPressed: (){
-                            
-                          },
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                          color: getColor.sailorBlue,
-                          child: Text('Guru',style: TextStyle(fontFamily: 'pierlight', color: Colors.white,fontSize: 18),),
-                        ),
-                      ),
-
-                      ButtonTheme(
-                        minWidth: 300,
-                        height: 40,
-
-                          child: RaisedButton(
-                          elevation: 0,
-                          onPressed: (){
-                            
-                          },
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                          color: getColor.sailorBlue,
-                          child: Text('Guru Besar',style: TextStyle(fontFamily: 'pierlight', color: Colors.white,fontSize: 18),),
-                        ),
-                      ),
+                      
                     ],),
                 ),
               ),
